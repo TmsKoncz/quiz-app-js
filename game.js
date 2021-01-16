@@ -72,7 +72,7 @@ getNewQuestion = () => {
     }
 
     questionCounter++
-    progressText.innerText = `Question ${questionCounter} of ${MAX_QUESTIONS}`
+    progressText.innerText = `${questionCounter}/${MAX_QUESTIONS}. kérdés`
     progressBarFull.style.width = `${(questionCounter/MAX_QUESTIONS) * 100}%`
     
     const questionsIndex = Math.floor(Math.random() * availableQuestions.length)
