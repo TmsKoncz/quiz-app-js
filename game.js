@@ -44,6 +44,14 @@ let questions = [
         choice4: "30%-40%",
         answer: 1,
     }
+    {
+        question: "Approximately what percent of U.S. power outages are caused by squirrels?",
+        choice1: "10-20%",
+        choice2: "5-10%",
+        choice3: "15-20%",
+        choice4: "30%-40%",
+        answer: 1,
+    }
 ]
 
 const SCORE_POINTS = 100
