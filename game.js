@@ -43,7 +43,7 @@ let questions = [
         choice3: "15-20%",
         choice4: "30%-40%",
         answer: 1,
-    }
+    },
     {
         question: "Approximately what percent of U.S. power outages are caused by squirrels?",
         choice1: "10-20%",
