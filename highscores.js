@@ -1,5 +1,5 @@
 const highScoresList = document.querySelector('#highScoresList')
-const highScores = JSON.parse(localStorage.getItem("highScores")) || [] //ITT KELL VALAMIT ÁLLÍTANI localstorage az eredeti
+const highScores = JSON.parse(localStorage.getItem("highScores")) || []
 
 highScoresList.innerHTML =
 highScores.map(score => {
