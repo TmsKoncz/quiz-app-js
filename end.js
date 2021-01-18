@@ -5,7 +5,7 @@ const mostRecentScore = localStorage.getItem('mostRecentScore')
 
 const highScores = JSON.parse(localStorage.getItem('highScores')) || []
 
-const MAX_HIGH_SCORES = 50
+const MAX_HIGH_SCORES = 9
 
 finalScore.innerText = mostRecentScore
 
@@ -27,7 +27,7 @@ saveHighScore = e => {
         return b.score - a.score
     })
 
-    highScores.splice(5)
+    highScores.splice(50)
 
     localStorage.setItem('highScores', JSON.stringify(highScores))
     window.location.assign('https://tmskoncz.github.io/virusok-kviz/highscores')
