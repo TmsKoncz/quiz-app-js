@@ -72,11 +72,6 @@ getNewQuestion = () => {
         return window.location.assign('https://tmskoncz.github.io/virusok-kviz/end')
     }
 
-    if(choice5) {
-        getNewQuestion()
-
-    }
-
     questionCounter++
     progressText.innerText = `${questionCounter}/${MAX_QUESTIONS}`
     progressBarFull.style.width = `${(questionCounter/MAX_QUESTIONS) * 100}%`
