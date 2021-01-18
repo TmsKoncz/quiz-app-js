@@ -17,6 +17,7 @@ let questions = [
         choice2: '4',
         choice3: '21',
         choice4: '17',
+        choice5: 'Később válaszolok',
         answer: 2,
     },
     {
@@ -64,11 +65,18 @@ startGame = () => {
     getNewQuestion()
 }
 
+
+
 getNewQuestion = () => {
     if(availableQuestions.length === 0 || questionCounter > MAX_QUESTIONS) {
         localStorage.setItem('mostRecentScore', score)
 
         return window.location.assign('https://tmskoncz.github.io/virusok-kviz/end')
+    }
+
+    if(choice5) {
+        getNewQuestion()
+
     }
 
     questionCounter++
