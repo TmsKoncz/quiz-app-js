@@ -30,7 +30,7 @@ saveHighScore = e => {
     highScores.splice(5)
 
     localStorage.setItem('highScores', JSON.stringify(highScores))
-    window.location.assign('https://tmskoncz.github.io/virusok-kviz/')
+    window.location.assign('https://tmskoncz.github.io/virusok-kviz/highscores')
 
     
 }
