@@ -135,7 +135,7 @@ function countdown( elementName, minutes, seconds )
     {
         msLeft = endTime - (+new Date);
         if ( msLeft < 1000 ) {
-            element.innerHTML = "Time is up!";
+            element.innerHTML = "Az időd lejárt! Hamarosan átirányítunk a beadási képernyőre. A neved megadása után beadhatod a tesztet!";
         } else {
             time = new Date( msLeft );
             hours = time.getUTCHours();
@@ -150,4 +150,4 @@ function countdown( elementName, minutes, seconds )
     updateTimer();
 }
 
-countdown( "ten-countdown", 10, 0 );
+countdown( "countdown", 20, 0 );
