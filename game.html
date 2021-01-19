@@ -14,6 +14,16 @@
                 <p>Tedd arrébb!</p>
                 <p>Hátralévő idő: </p><span id="time">20:00</span>
               </div>
+              <style>
+                #draggable { width: 150px; height: 150px; padding: 0.5em; }
+                </style>
+                <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+                <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+                <script>
+                $( function() {
+                  $( "#draggable" ).draggable();
+                } );
+                </script>
         </div>
         <div id="game" class="justify-center flex-column">
             <div id="hud">
