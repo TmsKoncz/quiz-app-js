@@ -79,6 +79,7 @@ body {
     background-color: #f1f1f1;
     border: 1px solid #d3d3d3;
     text-align: center;
+    size: 50px;
   }
   
   #time-header {
@@ -87,4 +88,5 @@ body {
     z-index: 10;
     background-color: #2196F3;
     color: #fff;
+    size: 20px;
   }
