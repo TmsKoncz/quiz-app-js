@@ -20,7 +20,7 @@ let questions = [
         answer: 1,
     },
     {
-        question: "Kérdés",
+        question: "Kérdés2",
         choice1: "Válasz 1",
         choice2: "Válasz 2",
         choice3: "Válasz 3",
@@ -69,7 +69,7 @@ getNewQuestion = () => {
     if(availableQuestions.length === 0 || questionCounter > MAX_QUESTIONS) {
         localStorage.setItem('mostRecentScore', score)
 
-        return window.location.assign('https://tmskoncz.github.io/virusok-kviz/end')
+        return window.location.assign('https://tmskoncz.github.io/virusok-kviz/end') //ha a countdown véget ér, ez legyen a végeredmény
     }
 
     questionCounter++
@@ -121,54 +121,33 @@ incrementScore = num => {
 
 startGame()
 
-//Visszaszámláló és pittyegés START//
-var countdown;
-var countdown_number;
-var mySoundObject;
 
-function countdown_trigger() {
-    if (countdown_number > 0) {
-        countdown_number--;
-        document.getElementById('countdown_text').innerHTML = countdown_number;
-        if (countdown_number > 0) {
-            countdown = setTimeout(countdown_trigger, 1000);
-        }
+function countdown( elementName, minutes, seconds )
+{
+    var element, endTime, hours, mins, msLeft, time;
 
-        if (countdown_number === 0) {
-            mySoundObject.play();
+    function twoDigits( n )
+    {
+        return (n <= 9 ? "0" + n : n);
+    }
+
+    function updateTimer()
+    {
+        msLeft = endTime - (+new Date);
+        if ( msLeft < 1000 ) {
+            element.innerHTML = "Time is up!";
+        } else {
+            time = new Date( msLeft );
+            hours = time.getUTCHours();
+            mins = time.getUTCMinutes();
+            element.innerHTML = (hours ? hours + ':' + twoDigits( mins ) : mins) + ':' + twoDigits( time.getUTCSeconds() );
+            setTimeout( updateTimer, time.getUTCMilliseconds() + 500 );
         }
     }
+
+    element = document.getElementById( countdown );
+    endTime = (+new Date) + 1000 * (60*minutes + seconds) + 500;
+    updateTimer();
 }
 
-function countdown_clear() {
-    clearTimeout(countdown);
-}
-
-function countdown_init() {
-    countdown_number = 11;
-    countdown_trigger();
-}
-
-document.getElementById('start').onclick = countdown_init;
-document.getElementById('stop').onclick = countdown_clear;
-
-soundManager.setup({
-    url: 'http://ivdemo.chaseits.co.uk/SoundManager2-2.97a.20131201/swf/soundmanager2_flash_xdomain/soundmanager2_flash9_debug.swf',
-    flashVersion: 9,
-    useHTML5Audio: true,
-    html5Test: 'maybe',
-    preferFlash: false,
-    onready: function () {
-        mySoundObject = soundManager.createSound({
-            id: 'mySound',
-            url: 'https://proxy.notificationsounds.com/message-tones/pristine-609/download/file-sounds-1150-pristine.mp3'
-        });
-    }
-});
-
-function WriteToFile(passForm) {
-var fso = new ActiveXObject("Scripting.FileSystemObject");
-var s = fso.CreateTextFile("db.txt", true);
-s.WriteLine(document.passForm.input.value);
-s.Close();
-}
+countdown( "ten-countdown", 10, 0 );
