@@ -121,35 +121,6 @@ incrementScore = num => {
 
 startGame()
 
-
-document.getElementById('timer').innerHTML =
-    000 + ":" + 40; //perc és mpx0
-startTimer();
-
-function startTimer() {
-  var presentTime = document.getElementById('timer').innerHTML;
-  var timeArray = presentTime.split(/[:]+/);
-  var m = timeArray[0];
-  var s = checkSecond((timeArray[1] - 1));
-  if(s==59){m=m-1}
-  //if(m<0){alert('timer completed')}
-  
-  document.getElementById('timer').innerHTML =
-    m + ":" + s;
-  console.log(m)
-  setTimeout(startTimer, 1000);
-}
-
-function checkSecond(sec) {
-  if (sec < 10 && sec >= 0) {sec = "0" + sec}; // add zero in front of numbers < 10
-  if (sec < 0) {sec = "59"};
-  return sec;
-}
-
-function endTimer() {
-    if(min < 0 && sec < 0) {
-        localStorage.setItem('mostRecentScore', score)
-
-        return window.location.assign('https://tmskoncz.github.io/virusok-kviz/end') //ha a countdown véget ér, dobjon a beadáshoz
-    }
+getChoicesLog(); {
+    console.log(question, selectedAnswer)
 }
