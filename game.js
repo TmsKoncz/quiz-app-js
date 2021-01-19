@@ -123,7 +123,7 @@ startGame()
 
 
 document.getElementById('timer').innerHTML =
-    020 + ":" + 00;
+    000 + ":" + 40; //perc és mpx0
 startTimer();
 
 function startTimer() {
@@ -147,7 +147,7 @@ function checkSecond(sec) {
 }
 
 function endTimer() {
-    if(setTimeout === 0) {
+    if(min < 0 && sec < 0) {
         localStorage.setItem('mostRecentScore', score)
 
         return window.location.assign('https://tmskoncz.github.io/virusok-kviz/end') //ha a countdown véget ér, dobjon a beadáshoz
