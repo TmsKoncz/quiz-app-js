@@ -68,7 +68,6 @@ startGame = () => {
 getNewQuestion = () => {
     if(availableQuestions.length === 0 || questionCounter > MAX_QUESTIONS) {
         localStorage.setItem('mostRecentScore', score)
-
         return window.location.assign('https://tmskoncz.github.io/virusok-kviz/end') //ha a countdown véget ér, ez legyen a végeredmény
     }
 
@@ -126,7 +125,7 @@ var consolelog = {question, selectedAnswer};
 console.log(consolelog);
 
 answersave = () => {
-    localStorage.setItem(score = '#mostrecentscore');
-    e.preventDefault(); //fogalmam sincs ez mit csinál, de hátha jó így
-
+    e.preventDefault();
+    // if(gameover < countdown || questionCounter > MAX_QUESTIONS){
+    localStorage.setItem('mostRecentScore', score); //}
 }
