@@ -123,9 +123,9 @@ startGame()
 //Ha kész a countdown, korrigálni kell az if-et és akkor elvileg működnie kell!
 answersave = () => {
     e.preventDefault();
-    if(endtime = time){
+    if(seconds < 0){
     localStorage.setItem('mostRecentScore', score); 
-    window.location.href = "end" }
+    window.location.href = "https://tmskoncz.github.io/virusok-kviz/end" }
 }
 
 // COUNTDOWN
