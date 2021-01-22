@@ -28,7 +28,7 @@ let questions = [
         answer: 1,
     },
     {
-        question: "Kérdés",
+        question: "Kérdés3",
         choice1: "Válasz 1",
         choice2: "Válasz 2",
         choice3: "Válasz 3",
@@ -36,7 +36,7 @@ let questions = [
         answer: 1,
     },
     {
-        question: "Kérdés",
+        question: "Kérdés4",
         choice1: "Válasz 1",
         choice2: "Válasz 2",
         choice3: "Válasz 3",
@@ -44,7 +44,7 @@ let questions = [
         answer: 1,
     },
     {
-        question: "Kérdés",
+        question: "Kérdés5",
         choice1: "Válasz 1",
         choice2: "Válasz 2",
         choice3: "Válasz 3",
@@ -121,6 +121,6 @@ incrementScore = num => {
 
 startGame()
 
-getChoicesLog(); {
-    console.log(question, selectedAnswer)
-}
+var consolelog = {question, selectedAnswer};
+
+console.log(consolelog);
