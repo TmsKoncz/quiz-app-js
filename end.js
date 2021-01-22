@@ -34,3 +34,6 @@ saveHighScore = e => {
 
     
 }
+
+
+console.log(username);
