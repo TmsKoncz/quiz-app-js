@@ -128,3 +128,32 @@ console.log(consolelog);
 answersave = () => {
     localStorage.setItem(score);
 }
+
+
+function startTimer(duration, display) {
+    var timer = duration, minutes, seconds;
+    setInterval(function () {
+        minutes = parseInt(timer / 60, 10)
+        seconds = parseInt(timer % 60, 10);
+
+        minutes = minutes < 10 ? "0" + minutes : minutes;
+        seconds = seconds < 10 ? "0" + seconds : seconds;
+
+        display.text("00 : " + minutes + " : " + seconds);
+
+        if (timer < 10) {
+            var audio = new Audio('beep.mp3');
+            audio.play();
+        }
+
+        if (--timer < 0) {
+            window.location.href = "end.html";
+        }
+    }, 1000);
+}
+
+jQuery(function ($) {
+    var testtime = 60 * 1,
+        display = $('#time');
+    startTimer(testtime, display);
+});
