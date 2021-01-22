@@ -124,3 +124,7 @@ startGame()
 var consolelog = {question, selectedAnswer};
 
 console.log(consolelog);
+
+answersave = () => {
+    localStorage.setItem(score);
+}
