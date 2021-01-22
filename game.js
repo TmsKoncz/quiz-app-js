@@ -160,4 +160,4 @@ function countdown( elementName, minutes, seconds )
     updateTimer();
 }
 
-countdown( "countdown", 10, 0 );
+countdown( "countdown", 0, 30 );
