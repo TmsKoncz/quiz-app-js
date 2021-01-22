@@ -120,10 +120,6 @@ incrementScore = num => {
 
 startGame()
 
-var consolelog = {question, selectedAnswer};
-
-console.log(consolelog);
-
 //Ha kész a countdown, korrigálni kell az if-et és akkor elvileg működnie kell!
 answersave = () => {
     e.preventDefault();
