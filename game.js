@@ -124,8 +124,8 @@ startGame()
 answersave = () => {
     e.preventDefault();
     if(endtime = time){
-    localStorage.setItem('mostRecentScore', score); }
-    window.location.href = "end"
+    localStorage.setItem('mostRecentScore', score); 
+    window.location.href = "end";}
 }
 
 // COUNTDOWN
