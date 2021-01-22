@@ -121,14 +121,17 @@ incrementScore = num => {
 startGame()
 
 //Ha kész a countdown, korrigálni kell az if-et és akkor elvileg működnie kell!
-answersave = () => {
-    e.preventDefault();
     function countdown() {
-    if(seconds < 0){
+    if(msLeft < 0) {
     localStorage.setItem('mostRecentScore', score); 
-    window.location.href = "https://tmskoncz.github.io/virusok-kviz/end" }
+    window.location.href = "https://tmskoncz.github.io/virusok-kviz/end";
+    e.preventDefault(); }
     }
-}
+
+        // Update remaining seconds
+        document.getElementById("countdown").innerHTML = seconds;
+        // Count down using javascript
+        window.setTimeout("countdown()", 1000);
 
 // COUNTDOWN
 function countdown( countdown, minutes, seconds ) //elementname van eredetile a cd. helyett
