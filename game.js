@@ -124,8 +124,41 @@ var consolelog = {question, selectedAnswer};
 
 console.log(consolelog);
 
+//Ha kész a countdown, korrigálni kell az if-et és akkor elvileg működnie kell!
 answersave = () => {
     e.preventDefault();
-    // if(gameover < countdown || questionCounter > MAX_QUESTIONS){
-    localStorage.setItem('mostRecentScore', score); //}
+    if(time < gameover || questionCounter > MAX_QUESTIONS){
+    localStorage.setItem('mostRecentScore', score); }
 }
+
+// COUNTDOWN
+var minute 	= 0;
+var second	= 30;
+var gameover = {minute = 0, second = 0};
+var time = {minute, second};
+
+setInterval( function(){
+    if( minute == 0 && second == 1){
+        document.getElementById("counter").innerHTML = "00:00";
+    }else{
+        second--;
+        if( second == 0 ){
+            minute --;
+            second = 60;
+
+            if( minute == 0 ){
+                minute = minute;
+            }
+        }
+        if( minute.toString().length == 1 ){
+            minute = "0"+minute;
+        }
+
+        if( second.toString().length == 1 ){
+            second = "0"+second;
+        }
+
+
+        document.getElementById("counter").innerHTML = minute + ":" + second;
+    }
+}, 1000)
