@@ -133,7 +133,7 @@ answersave = () => {
 }
 
 // COUNTDOWN
-function countdown( elementName, minutes, seconds )
+function countdown( countdown, minutes, seconds ) //elementname van eredetile a cd. helyett
 {
     var element, endTime, hours, mins, msLeft, time;
 
