@@ -127,8 +127,9 @@ console.log(consolelog);
 //Ha kész a countdown, korrigálni kell az if-et és akkor elvileg működnie kell!
 answersave = () => {
     e.preventDefault();
-    //if(endtime > time || questionCounter > MAX_QUESTIONS){
-    localStorage.setItem('mostRecentScore', score); //}
+    if(endtime = time){
+    localStorage.setItem('mostRecentScore', score); }
+    window.location.href = "end"
 }
 
 // COUNTDOWN
