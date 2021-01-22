@@ -127,38 +127,37 @@ console.log(consolelog);
 //Ha kész a countdown, korrigálni kell az if-et és akkor elvileg működnie kell!
 answersave = () => {
     e.preventDefault();
-    //if(time < gameover || questionCounter > MAX_QUESTIONS){
+    //if(endtime > time || questionCounter > MAX_QUESTIONS){
     localStorage.setItem('mostRecentScore', score); //}
 }
 
 // COUNTDOWN
-var minute 	= 0;
-var second	= 30;
-var gameover = {minute = 0, second = 0};
-var time = {minute, second};
+function countdown( elementName, minutes, seconds )
+{
+    var element, endTime, hours, mins, msLeft, time;
 
-setInterval( function(){
-    if( minute == 0 && second == 1){
-        document.getElementById("counter").innerHTML = "00:00";
-    }else{
-        second--;
-        if( second == 0 ){
-            minute --;
-            second = 60;
-
-            if( minute == 0 ){
-                minute = minute;
-            }
-        }
-        if( minute.toString().length == 1 ){
-            minute = "0"+minute;
-        }
-
-        if( second.toString().length == 1 ){
-            second = "0"+second;
-        }
-
-
-        document.getElementById("counter").innerHTML = minute + ":" + second;
+    function twoDigits( n )
+    {
+        return (n <= 9 ? "0" + n : n);
     }
-}, 1000)
+
+    function updateTimer()
+    {
+        msLeft = endTime - (+new Date);
+        if ( msLeft < 1000 ) {
+            element.innerHTML = "Az idő lejárt!";
+        } else {
+            time = new Date( msLeft );
+            hours = time.getUTCHours();
+            mins = time.getUTCMinutes();
+            element.innerHTML = (hours ? hours + ':' + twoDigits( mins ) : mins) + ':' + twoDigits( time.getUTCSeconds() );
+            setTimeout( updateTimer, time.getUTCMilliseconds() + 500 );
+        }
+    }
+
+    element = document.getElementById( countdown );
+    endTime = (+new Date) + 1000 * (60*minutes + seconds) + 500;
+    updateTimer();
+}
+
+countdown( "countdown", 10, 0 );
