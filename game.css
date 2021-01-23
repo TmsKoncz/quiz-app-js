@@ -76,3 +76,9 @@ body {
 #countdown {
     position: center;
 }
+
+.countdown {
+    position: center;
+    text-align: center;
+    
+}
