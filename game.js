@@ -17,6 +17,7 @@ let questions = [
         choice2: 'Válasz 2',
         choice3: 'Válasz 3',
         choice4: 'Válasz 4',
+        choice5: 'Válasz 5',
         answer: 1,
     },
     {
@@ -25,6 +26,7 @@ let questions = [
         choice2: "Válasz 2",
         choice3: "Válasz 3",
         choice4: "Válasz 4",
+        choice5: 'Válasz 5',
         answer: 1,
     },
     {
@@ -33,6 +35,7 @@ let questions = [
         choice2: "Válasz 2",
         choice3: "Válasz 3",
         choice4: "Válasz 4",
+        choice5: 'Válasz 5',
         answer: 1,
     },
     {
@@ -41,6 +44,7 @@ let questions = [
         choice2: "Válasz 2",
         choice3: "Válasz 3",
         choice4: "Válasz 4",
+        choice5: 'Válasz 5',
         answer: 1,
     },
     {
@@ -49,6 +53,7 @@ let questions = [
         choice2: "Válasz 2",
         choice3: "Válasz 3",
         choice4: "Válasz 4",
+        choice5: 'Válasz 5',
         answer: 1,
     }
 ]
@@ -163,3 +168,9 @@ function countdown( countdown, minutes, seconds ) //elementname van eredetile a 
 }
 
 countdown( "countdown", 0, 30 );
+
+
+function hideCountdown(){
+    $(x-btn).click(function (event) {
+        $('#countdown:visible').hide();
+})};
