@@ -130,7 +130,13 @@ startGame()
     if(msLeft < 0) {
     localStorage.setItem('mostRecentScore', score); 
     window.location.href = "https://tmskoncz.github.io/virusok-kviz/end";
-    e.preventDefault(); }
+    e.preventDefault();
+    const score = {
+        score: mostRecentScore,
+        name: username.value
+    }
+
+    highScores.push(score) }
     }
 
         // Update remaining seconds
