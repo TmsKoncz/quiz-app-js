@@ -156,7 +156,6 @@ function countdown(minutes) {
         }
 
         if ( mins == 1 ) {
-            var audio = new Audio('beep.mp3');
             audio.play();
         }
     }
@@ -164,3 +163,5 @@ function countdown(minutes) {
 }
 //You can use this script with a call to onclick, onblur or any other attribute you would like to use. 
 countdown(6);//where n is the number of minutes required. 
+
+var audio = new Audio('beep.mp3');
