@@ -161,19 +161,4 @@ function countdown(minutes) {
     tick();
 }
 //You can use this script with a call to onclick, onblur or any other attribute you would like to use. 
-countdown(n);//where n is the number of minutes required. 
-
-//Ha kész a countdown, korrigálni kell az if-et és akkor elvileg működnie kell!
-    function countdown() {
-    if(msLeft < 0) {
-    localStorage.setItem('mostRecentScore', score); 
-    window.location.href = "https://tmskoncz.github.io/virusok-kviz/end";
-    e.preventDefault();
-    const score = {
-        score: mostRecentScore,
-        name: username.value
-    }
-
-    highScores.push(score) }
-    }
-
+countdown(2);//where n is the number of minutes required. 
