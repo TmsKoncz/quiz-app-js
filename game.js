@@ -143,5 +143,3 @@ startGame()
         document.getElementById("countdown").innerHTML = seconds;
         // Count down using javascript
         window.setTimeout("countdown()", 1000);
-
-// COUNTDOWN
