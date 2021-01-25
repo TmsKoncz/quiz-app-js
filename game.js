@@ -146,6 +146,16 @@ function countdown(minutes) {
             if(mins > 1){
                 countdown(mins-1);           
             }
+
+        if( mins == 0 ) {
+            localStorage.setItem('mostRecentScore', score); 
+            window.location.href = "https://tmskoncz.github.io/virusok-kviz/end";
+            e.preventDefault();
+            const score = {
+                score: mostRecentScore,
+                name: username.value
+            }
+            highScores.push(score) }
         }
     }
     tick();
