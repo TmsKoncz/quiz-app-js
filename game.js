@@ -152,14 +152,10 @@ function countdown(minutes) {
         } else {
             window.location.href = "https://tmskoncz.github.io/virusok-kviz/end";
             e.preventDefault();
-            const score = {
-                score: mostRecentScore,
-                name: username.value
-            }
             highScores.push(score) }
         }
 
-        if ( mins == 5 ) {
+        if ( mins == 1 ) {
             var audio = new Audio('beep.mp3');
             audio.play();
         }
