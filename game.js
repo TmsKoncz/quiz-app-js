@@ -147,8 +147,9 @@ function countdown(minutes) {
                 countdown(mins-1);           
             }
 
-        if( mins == 0 ) {
+        if( mins == 1 ) {
             localStorage.setItem('mostRecentScore', score); 
+        } else {
             window.location.href = "https://tmskoncz.github.io/virusok-kviz/end";
             e.preventDefault();
             const score = {
@@ -157,8 +158,13 @@ function countdown(minutes) {
             }
             highScores.push(score) }
         }
+
+        if ( mins == 5 ) {
+            var audio = new Audio('beep.mp3');
+            audio.play();
+        }
     }
     tick();
 }
 //You can use this script with a call to onclick, onblur or any other attribute you would like to use. 
-countdown(2);//where n is the number of minutes required. 
+countdown(6);//where n is the number of minutes required. 
