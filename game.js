@@ -147,7 +147,7 @@ function countdown(minutes) {
                 countdown(mins-1);           
             }
 
-        if( mins == 0 ) {
+        if( mins == 2 ) {
             localStorage.setItem('mostRecentScore', score); 
         } else {
             window.location.href = "https://tmskoncz.github.io/virusok-kviz/end";
