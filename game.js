@@ -156,7 +156,7 @@ function countdown(minutes) {
         }
 
         if ( mins < 1 ) {
-        } {
+        } else {
             audio.play();
         }
     }
