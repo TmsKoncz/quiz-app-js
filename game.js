@@ -148,9 +148,9 @@ function countdown(minutes) {
             }
 
         if( mins < 0 & seconds < 0 ) {
-            localStorage.setItem('mostRecentScore', score); 
         } else {
             window.location.replace("https://tmskoncz.github.io/virusok-kviz/end");
+            localStorage.setItem('mostRecentScore', score); 
             e.preventDefault();
             highScores.push(score) }
         }
