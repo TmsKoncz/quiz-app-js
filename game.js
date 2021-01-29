@@ -156,6 +156,7 @@ function countdown(minutes) {
         }
 
         if ( mins < 1 ) {
+        } {
             audio.play();
         }
     }
