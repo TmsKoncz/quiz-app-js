@@ -126,6 +126,13 @@ incrementScore = num => {
 startGame()
 
 
+
+
+
+
+
+
+
 function countdown(minutes) {
     var seconds = 60;
     var mins = minutes
