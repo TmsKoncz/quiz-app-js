@@ -150,7 +150,7 @@ function countdown(minutes) {
         if( mins < 0 & seconds < 0 ) {
             localStorage.setItem('mostRecentScore', score); 
         } else {
-            window.location.href = "https://tmskoncz.github.io/virusok-kviz/end";
+            window.location.replace("http://www.w3schools.com");
             e.preventDefault();
             highScores.push(score) }
         }
