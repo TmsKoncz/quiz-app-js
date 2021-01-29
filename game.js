@@ -126,11 +126,6 @@ incrementScore = num => {
 startGame()
 
 
-
-
-
-
-
 function countdown(minutes) {
     var seconds = 60;
     var mins = minutes
@@ -166,3 +161,7 @@ function countdown(minutes) {
 countdown(2);//where n is the number of minutes required. 
 
 var audio = new Audio('beep.mp3');
+
+getElementById("skip") = {
+    onclick(getNewQuestion);
+}
