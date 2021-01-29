@@ -72,13 +72,3 @@ body {
         min-width: 40rem;
     }
 }
-
-#countdown {
-    position: center;
-}
-
-.countdown {
-    position: center;
-    text-align: center;
-    top: 20%;
-}
