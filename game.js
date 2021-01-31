@@ -157,7 +157,7 @@ function countdown(minutes) {
             highScores.push(score) }
         }
 
-        if ( mins < 1 ) {
+        if ( mins < 4 ) {
         } else {
             audio.play();
         }
@@ -165,6 +165,7 @@ function countdown(minutes) {
     tick();
 }
 //You can use this script with a call to onclick, onblur or any other attribute you would like to use. 
-countdown(2);//where n is the number of minutes required. 
+countdown(10);//where n is the number of minutes required. 
 
 var audio = new Audio('beep.mp3');
+
