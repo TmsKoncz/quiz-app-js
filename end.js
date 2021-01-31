@@ -31,6 +31,10 @@ saveHighScore = e => {
 
     localStorage.setItem('highScores', JSON.stringify(highScores))
     window.location.assign('https://tmskoncz.github.io/virusok-kviz/highscores')
+    //TESZT SZENVEDÉS
+    var retrievedObject = localStorage.getItem('highScores');
+    console.log('retrievedObject: ', JSON.parse(retrievedObject));
+    //TESZT VÉGE
 
     
 }
