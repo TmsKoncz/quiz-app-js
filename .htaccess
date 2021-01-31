@@ -1,4 +1,4 @@
 AuthUserFile /path/.htpasswd
-AuthName "Bejelentkezés"
+AuthName "BejelentkezÃ©s"
 AuthType Basic
 require valid-user
